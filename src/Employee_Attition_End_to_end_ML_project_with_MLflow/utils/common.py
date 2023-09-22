@@ -1,7 +1,7 @@
 import os
 from box.exceptions import BoxValueError
 import yaml
-from mlProject import logger
+from Employee_Attition_End_to_end_ML_project_with_MLflow import logger
 import json
 import joblib
 from ensure import ensure_annotations
