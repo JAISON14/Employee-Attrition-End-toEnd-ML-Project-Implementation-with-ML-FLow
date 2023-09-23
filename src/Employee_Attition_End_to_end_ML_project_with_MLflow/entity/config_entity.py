@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Dict
 
 
 @dataclass(frozen=True)
@@ -35,19 +36,6 @@ class ModelTrainerConfig:
     train_target_path: Path
     test_target_path: Path
     model_name: str
-    alpha: float
-    l1_ratio: float
-    target_column: str
-
-
-
-
-@dataclass(frozen=True)
-class ModelEvaluationConfig:
-    root_dir: Path
-    test_data_path: Path
-    model_path: Path
-    all_params: dict
-    metric_file_name: Path
-    target_column: str
-    mlflow_uri: str
+    model_type: str # New field to identify model type
+    hyperparameters: Dict[str, float]
+ 

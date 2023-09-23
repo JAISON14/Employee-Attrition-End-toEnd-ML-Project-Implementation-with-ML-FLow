@@ -1,3 +1,4 @@
-ElasticNet:
-  alpha: 0.5  
-  l1_ratio: 0.7
+model_parameters:
+  hyperparameters:
+    LogisticRegression:
+      C: 1.0

@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Jaison/Documents/Workspace/Main%20Projects/End_to_end_Employee/End_to_End_Implementation/mlruns/124379067699532963/17d44c0dd1af4a37907ab8d4e5696f05/artifacts
+end_time: 1695486901017
+entry_point_name: ''
+experiment_id: '124379067699532963'
+lifecycle_stage: active
+run_id: 17d44c0dd1af4a37907ab8d4e5696f05
+run_name: Run_LogisticRegression
+run_uuid: 17d44c0dd1af4a37907ab8d4e5696f05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1695486884043
+status: 3
+tags: []
+user_id: Jaison

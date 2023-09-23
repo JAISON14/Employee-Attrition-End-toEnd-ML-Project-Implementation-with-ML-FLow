@@ -4,7 +4,7 @@ from Employee_Attition_End_to_end_ML_project_with_MLflow.entity.config_entity im
                                             DataValidationConfig,
                                             DataTransformationConfig,
                                             ModelTrainerConfig,
-                                            ModelEvaluationConfig)
+                                            )
 
 class ConfigurationManager:
     def __init__(
@@ -67,10 +67,12 @@ class ConfigurationManager:
     
 
 
-    def get_model_trainer_config(self) -> ModelTrainerConfig:
+
+    def get_model_trainer_config(self, model_type: str) -> ModelTrainerConfig:
         config = self.config.model_trainer
-        params = self.params.ElasticNet
+        params = self.params.model_parameters
         schema =  self.schema.TARGET_COLUMN
+        hyperparameters = self.params.get(model_type, {})
 
         create_directories([config.root_dir])
 
@@ -81,32 +83,30 @@ class ConfigurationManager:
             train_target_path = config.train_target_path,
             test_target_path = config.test_target_path,
             model_name = config.model_name,
-            alpha = params.alpha,
-            l1_ratio = params.l1_ratio,
-            target_column = schema.name
+            model_type = model_type,
+            hyperparameters = params.get('hyperparameters', {})
             
         )
 
         return model_trainer_config
-    
 
 
-    def get_model_evaluation_config(self) -> ModelEvaluationConfig:
-        config = self.config.model_evaluation
-        params = self.params.ElasticNet
-        schema =  self.schema.TARGET_COLUMN
+    # def get_model_evaluation_config(self) -> ModelEvaluationConfig:
+    #     config = self.config.model_evaluation
+    #     params = self.params.ElasticNet
+    #     schema =  self.schema.TARGET_COLUMN
 
-        create_directories([config.root_dir])
+    #     create_directories([config.root_dir])
 
-        model_evaluation_config = ModelEvaluationConfig(
-            root_dir=config.root_dir,
-            test_data_path=config.test_data_path,
-            model_path = config.model_path,
-            all_params=params,
-            metric_file_name = config.metric_file_name,
-            target_column = schema.name,
-            mlflow_uri="https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow",
+    #     model_evaluation_config = ModelEvaluationConfig(
+    #         root_dir=config.root_dir,
+    #         test_data_path=config.test_data_path,
+    #         model_path = config.model_path,
+    #         all_params=params,
+    #         metric_file_name = config.metric_file_name,
+    #         target_column = schema.name,
+    #         mlflow_uri="https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow",
            
-        )
+    #     )
 
-        return model_evaluation_config
+    #     return model_evaluation_config
