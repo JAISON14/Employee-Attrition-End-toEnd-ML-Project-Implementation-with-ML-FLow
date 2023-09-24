@@ -2,6 +2,7 @@
 ![image](https://github.com/JAISON14/Employee-Attrition-End-toEnd-ML-Project-Implementation-with-ML-FLow/assets/24632348/eb0f0a2b-220d-4510-9803-5f185d07d6eb)
 
 Dataset: https://www.kaggle.com/datasets/patelprashant/employee-attrition 
+
 Jupiter notebook used for EDA and preliminary analysis: https://github.com/JAISON14/Employee_Attrition 
 
 ## About this project
