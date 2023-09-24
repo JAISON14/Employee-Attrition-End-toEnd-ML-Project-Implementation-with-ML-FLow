@@ -1,5 +1,6 @@
 # Employee Attrition End toEnd ML Project Implementation with ML FLow
-https://user-images.githubusercontent.com/24632348/261858810-3b8f2b3f-ec77-4578-9a51-a1782981487b.jpg
+![image](https://github.com/JAISON14/Employee-Attrition-End-toEnd-ML-Project-Implementation-with-ML-FLow/assets/24632348/eb0f0a2b-220d-4510-9803-5f185d07d6eb)
+
 Dataset: https://www.kaggle.com/datasets/patelprashant/employee-attrition 
 Jupiter notebook used for EDA and preliminary analysis: https://github.com/JAISON14/Employee_Attrition 
 
