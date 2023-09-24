@@ -73,7 +73,7 @@ class ModelTrainer:
                 
                 # Log model
                 mlflow.sklearn.log_model(model, f"{self.config.model_name}_{self.config.model_type}")
-                joblib.dump(model, os.path.join(self.config.root_dir, self.config.model_type))
+                joblib.dump(model, os.path.join(self.config.root_dir, f"{self.config.model_type}.pkl"))
 
 
 

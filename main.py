@@ -57,18 +57,6 @@ except Exception as e:
 
 
 
-# STAGE_NAME = "Model evaluation stage"
-# try:
-#    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<") 
-#    data_ingestion = ModelEvaluationTrainingPipeline()
-#    data_ingestion.main()
-#    logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
-# except Exception as e:
-#         logger.exception(e)
-#         raise e
-
-
-
 
 
 

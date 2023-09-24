@@ -23,7 +23,7 @@ class ModelTrainerTrainingPipeline:
         try:
             config_manager = ConfigurationManager()
             models = [
-                (LogisticRegression(random_state=42), "Logistic Regression"),
+                 (LogisticRegression(random_state=42), "Logistic Regression"),
                  (SVC(random_state=42), "Support Vector Machines"),
                 (KNeighborsClassifier(), "K-Nearest Neighbors"),
                 (DecisionTreeClassifier(random_state=42), "Decision Trees"),
