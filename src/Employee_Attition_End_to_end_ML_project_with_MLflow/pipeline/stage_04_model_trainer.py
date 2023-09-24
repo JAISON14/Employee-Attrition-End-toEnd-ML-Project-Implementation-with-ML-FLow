@@ -12,6 +12,7 @@ from sklearn.naive_bayes import GaussianNB
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 from catboost import CatBoostClassifier
+from imblearn.ensemble import RUSBoostClassifier, EasyEnsembleClassifier
 
 STAGE_NAME = "Model Trainer stage"
 
@@ -34,7 +35,9 @@ class ModelTrainerTrainingPipeline:
                 (AdaBoostClassifier(random_state=42), "AdaBoost"),
                 (XGBClassifier(random_state=42), "XGBoost"),
                 (LGBMClassifier(random_state=42), "LightGBM"),
-                (CatBoostClassifier(random_state=42, verbose=0), "CatBoost")
+                (CatBoostClassifier(random_state=42, verbose=0), "CatBoost"),
+                (RUSBoostClassifier(random_state=42),"RUSBoost"),
+                (EasyEnsembleClassifier(random_state=42),"EasyEnsemble")
             ]
 
 
