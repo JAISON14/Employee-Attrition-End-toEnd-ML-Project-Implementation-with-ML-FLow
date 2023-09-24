@@ -8,6 +8,7 @@ import mlflow.sklearn
 from sklearn.base import clone
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from Employee_Attition_End_to_end_ML_project_with_MLflow.entity.config_entity import ModelTrainerConfig
+from urllib.parse import urlparse
 
 
 
@@ -21,6 +22,7 @@ class ModelTrainer:
             # Set MLflow server URI
             mlflow.set_tracking_uri('https://dagshub.com/JAISON14/End_to_End_Implementation.mlflow')
             
+
             mlflow.set_experiment(f"Experiment_{self.config.model_type}")
             
             with mlflow.start_run(run_name=f"Run_{self.config.model_type}") as run:
